@@ -350,3 +350,5 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+// add new comment test git
