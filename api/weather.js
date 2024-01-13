@@ -5,7 +5,9 @@ const locationsEndpoint = params =>
   `https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${params.cityName}`;
 
 const foreCastEndpoint = params =>
-  `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${params.cityName}&days=${params.numOfDays}&aqi=no&alerts=no`;
+  `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${
+    params.cityName
+  }&days=${params.numOfNextDays + 1}&aqi=no&alerts=no`;
 
 const apiCall = async endpoint => {
   const option = {

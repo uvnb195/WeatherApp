@@ -9,9 +9,7 @@ function DetailItem(props) {
         source={props.imageSource}
         resizeMode="contain"
       />
-      <Text style={styles.text} key={props.id}>
-        {props.title}
-      </Text>
+      <Text style={styles.text}>{props.title}</Text>
     </View>
   );
 }
