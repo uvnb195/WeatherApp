@@ -8,6 +8,7 @@ function DetailItem(props) {
         style={styles.img}
         source={props.imageSource}
         resizeMode="contain"
+        tintColor={'white'}
       />
       <Text style={styles.text}>{props.title}</Text>
     </View>
