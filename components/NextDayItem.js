@@ -7,7 +7,7 @@ function NextDayItem(props) {
     <View style={[styles.container, props.style]}>
       <Image source={props.imgSource} style={styles.img} resizeMode="contain" />
       <Text style={styles.subTitle}>{props.subTitle}</Text>
-      <Text style={styles.title}>{props.title}&#176;</Text>
+      <Text style={styles.title}>{props.title}&#176;C</Text>
     </View>
   );
 }

@@ -191,7 +191,14 @@ function App() {
             {/* Main view section */}
             <View style={styles.mainContent}>
               <Text style={styles.contentTitle}>
-                {`${weather?.location?.name},`}
+                {`${
+                  (weather?.location.name.length &&
+                    weather.location.name.length >= 15) ||
+                  (weather?.location.country.length &&
+                    weather.location.country.length >= 15)
+                    ? weather?.location?.name + ',\n'
+                    : weather?.location?.name + ','
+                }`}
                 <Text style={styles.contentSubTitle}>
                   {' ' + weather?.location?.country}
                 </Text>
@@ -205,7 +212,7 @@ function App() {
                 style={styles.contentImg}
               />
               <Text style={styles.contentMainText}>
-                {weather?.current.temp_c}&#176;
+                {weather?.current.temp_c}&#176;C
               </Text>
               <Text style={styles.contentSubText}>
                 {weather?.current?.condition?.text}
